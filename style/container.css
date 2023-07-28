@@ -1,0 +1,225 @@
+body {
+  width: 100%;
+  background: #fff url("../assets/img/blue_pink_6.jpg") center center /
+    cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: -150px;
+}
+
+.container {
+  display: flex;
+  margin-inline: auto;
+  text-align: center;
+  height: 100%;
+}
+
+.center img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 200;
+}
+
+h2 {
+  font-size: 90px;
+  color: #990568;
+  font-weight: 5000;
+  letter-spacing: 0.2px;
+  line-height: 60px;
+  font-family: 'Chakra Petch', sans-serif;
+  margin-top: 200px;
+  margin-bottom: -40px;
+}
+
+h2 span {
+  color: #7e13bd;
+  font-size: 110px;
+}
+
+.wrap {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#play {
+  margin-top: 100px;
+}
+#settings {
+  margin-bottom: 15px;
+}
+
+.wrap .button, #backButton_1, #backButton_2 {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #990568;
+  background: linear-gradient(90deg, rgb(212, 33, 189) 0%, rgb(79, 161, 209) 100%);  /* rgba(129,230,217,1) */
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(240, 29, 152, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  margin-top: 15px;
+  }
+
+  .wrap button::before, #backButton_1::before, #backButton_2::before{
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #990568;
+  box-shadow: 0 0 60px rgba(255, 0, 140, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus, #backButton_1:hover, #backButton_1:focus, #backButton_2:hover, #backButton_2:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.wrap button:hover::before, .wrap  button:focus::before, #backButton_1:hover::before, #backButton_1:focus::before,
+#backButton_2:hover::before, #backButton_2:focus::before {
+  opacity: 1;
+}
+
+.wrap  button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #990568;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+#settingsPage{
+  margin-top: 350px;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+figure img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateX(-50%);
+  animation-name: jump;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes jump {
+    0% {
+      left: 20%;
+      transform: translateX(-50%) translateY(0%);
+    }
+  
+    20% {
+      left: 20%;
+      transform: translateX(-50%) translateY(-100%);
+    }
+  
+    40% {
+      left: 20%;
+      transform: translateX(-50%) translateY(0%);
+    }
+  
+    60% {
+      left: 20%;
+      transform: translateX(-50%) translateY(-100%);
+    }
+  
+    80% {
+      left: 20%;
+      transform: translateX(-50%) translateY(0%);
+    }
+  
+    100% {
+      left: 20%;
+      transform: translateX(-50%) translateY(-100%);
+    }
+  }
+
+
+
+  h3 {
+    font-size: 70px;
+    color: #e22fc4;
+    font-weight: 5000;
+    letter-spacing: 0.2px;
+    line-height: 60px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin-top: 200px;
+    margin-bottom: 60px;
+  }
+
+
+  h1 {
+    font-size: 250px;
+    color: #990568;
+    font-weight: 10000;
+    letter-spacing: 0.2px;
+    line-height: -60px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin-top: 350px;
+    margin-bottom: 250px;
+  }
+
+  i {
+    font-size: 50px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  }
+
+  #gameOver-wrap {
+    margin-top: -200px;
+  }
+
+  .settings-title {
+    margin-bottom: 30px;
+    margin-top: -40px;
+  }
+
+  .settings-div{
+    margin-left: -165px;
+  } 
